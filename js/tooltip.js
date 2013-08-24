@@ -209,6 +209,9 @@
     offset.top  = offset.top  + marginTop
     offset.left = offset.left + marginLeft
 
+    // fix size of tooltips that extend outside of <body>
+    $tip.css({ width: $tip[0].offsetWidth })
+
     $tip
       .offset(offset)
       .addClass('in')
